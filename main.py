@@ -5,7 +5,11 @@ sys.setdefaultencoding('utf8')
 import csv
 import codecs
 import json
+import os, errno
 
+path1 = "./files"
+if not os.path.exists(path1):
+    os.makedirs(path1)
 f = codecs.open('parquimetro.csv',"rb","utf-16")
 csvread = csv.reader(f,delimiter=';')
 csvread.next()
