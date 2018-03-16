@@ -11,7 +11,6 @@ csvread = csv.reader(f,delimiter=';')
 csvread.next()
 for row in csvread:
     print row[3]
-    # print row[6]
-    # data = json.dumps(row[6])
     decoded = json.loads(row[6])
-    print decoded["id_token"]
+    print "id_tokenn: " + decoded["id_token"]
+    print "reresh_token: " + decoded["refresh_token"]
