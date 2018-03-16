@@ -14,3 +14,5 @@ for row in csvread:
     decoded = json.loads(row[6])
     print "id_tokenn: " + decoded["id_token"]
     print "reresh_token: " + decoded["refresh_token"]
+    file = open("files/"+ row[3] + "_token.json", "w")
+    file.write("{\"api_token_id\":\"" + decoded["id_token"] + "\", \"api_token_renew\":\"" + decoded["refresh_token"] +"\"}")
