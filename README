@@ -1,0 +1,5 @@
+# MODO DE USO:
+python main.py nombredelarchivo
+
+ejemplo
+python main.py parquimetro.csv
